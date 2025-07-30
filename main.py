@@ -29,7 +29,12 @@ def download_model_from_gdrive():
     return destination
 
 model_path = download_model_from_gdrive()
-model = load_model(model_path)
+from tensorflow.keras.models import load_model
+from tensorflow.keras.layers import LeakyReLU
+
+model = load_model(model_path, compile=False, custom_objects={"LeakyReLU": LeakyReLU})
+
+# model = load_model(model_path, compile=False, custom_objects={"LeakyReLU": LeakyReLU})
 
 # --- Class Names ---
 class_names = ['Aloevera', 'Amar poi', 'Amla', 'Amruta_Balli', 'Arali', 'Ashoka', 'Ashwagandha', 'Astma_weed', 
