@@ -2,6 +2,7 @@ fastapi
 python-multipart
 uvicorn
 gunicorn==21.2.0
+gdown
 
 tensorflow==2.17.0
 tensorflow-estimator==2.12.0
