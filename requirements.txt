@@ -4,8 +4,4 @@ tensorflow
 numpy
 pillow
 python-multipart
-<<<<<<< HEAD
 gdown
-=======
-gdown
->>>>>>> b7f021533f6871301a9441616094fe161d5e5ca4
