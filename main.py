@@ -7,8 +7,18 @@ from tensorflow.keras.preprocessing import image
 import numpy as np
 import io
 from PIL import Image
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # For dev only: allow all origins
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+
 
 # --- Download model from GDrive if not already ---
 def download_model_from_gdrive():
